@@ -1,0 +1,2 @@
+Users must be able to log in with username and password.
+The system should display an error message if the credentials are invalid.
