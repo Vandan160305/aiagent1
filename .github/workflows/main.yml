@@ -1,0 +1,18 @@
+name: Run Tests
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: pip install selenium
+      - name: Run tests
+        run: python test_automation.py
